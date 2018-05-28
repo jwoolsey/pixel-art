@@ -1,8 +1,9 @@
 // Select color input
-var color;
+var color = document.getElementById('colorPicker').value;
 
 // Select size input
-var rows, cols;
+var rows = document.getElementById('inputHeight').value;
+var cols = document.getElementById('inputWidth').value;
 
 // When size is submitted by the user, call makeGrid()
 
