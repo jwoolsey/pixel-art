@@ -26,6 +26,7 @@ td {
 table {
     border-collapse: collapse;
     margin: 0 auto;
+    float: center;
 }
 
 tr {
@@ -37,6 +38,6 @@ td {
 }
 
 input[type=number] {
-    width: 3em;
+    width: 4em;
     text-align: center;
 }

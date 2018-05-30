@@ -1,32 +1,23 @@
 // Select color input
-var color = document.getElementById('colorPicker').value;
+var paint = document.getElementById('colorPicker').value;
 
 // Select size input
+var table = document.getElementById('pixelCanvas');
 var rows = document.getElementById('inputHeight').value;
 var cols = document.getElementById('inputWidth').value;
 
 // When size is submitted by the user, call makeGrid()
+$('#sizePicker').submit.addEventListener('click', makeGrid());
 
-function makeGrid() {
+function makeGrid(rows, cols) {
 
 // Your code goes here!
-.hover()
-.toggle()
-
-}
-
-function clickableGrid( rows, cols, callback ){
-  var i=0;
   var grid = document.createElement('table');
   grid.className = 'grid';
-  for (var r=0;r<rows;++r){
+  for (let r of rows) {
     var tr = grid.appendChild(document.createElement('tr'));
-    for (var c=0;c<cols;++c){
-      var cell = tr.appendChild(document.createElement('td'));
-      cell.innerHTML = ++i;
-      cell.addEventListener('click',(function(el,r,c,i){
-        return function(){ callback(el,r,c,i); }
-       })(cell,r,c,i),false);
+    for (let c of cols) {
+      var td = tr.appendChild(document.createElement('td'));
     }
   }
   return grid;
