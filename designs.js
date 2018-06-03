@@ -1,6 +1,6 @@
 // Select color input
 var paint = document.getElementById('colorPicker').value;
-//var gridForm = $('#sizePicker');
+var gridForm = $('#sizePicker');
 paint.addEventListener("switch", colors(), false);
 
 // Select size input
@@ -31,8 +31,6 @@ function makeGrid(rows, cols) {
   }
   document.body.appendChild(table);
 }
-
-
 
 // Select Colors
 function colors() {
