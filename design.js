@@ -15,7 +15,7 @@ gridForm.submit(function() {
 
   //clear any previous grids
   resetTable();
-  
+
   //fetch user input size
   rows = document.getElementById('inputHeight').value;
   cols = document.getElementById('inputWidth').value;
@@ -44,8 +44,8 @@ function resetTable() {
   }
 }
 
-/*function colors() {
+function colors() {
   let paintColor = paint.value;
   gridForm.style.color = paintColor;
   return paintColor;
-}*/
+}
