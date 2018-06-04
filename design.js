@@ -1,6 +1,7 @@
 //Select color input
 var paint = document.getElementById('colorPicker').value;
 var gridForm = $('#sizePicker');
+
 //paint.addEventListener('switch', colors(), false);
 
 var table = document.getElementById('pixelCanvas');
@@ -12,6 +13,9 @@ gridForm.submit(function() {
   //preventDefault
   event.preventDefault();
 
+  //clear any previous grids
+  resetTable();
+  
   //fetch user input size
   rows = document.getElementById('inputHeight').value;
   cols = document.getElementById('inputWidth').value;
@@ -31,6 +35,13 @@ function makeGrid(rows, cols) {
     }
   }
   document.body.appendChild(table);
+}
+
+function resetTable() {
+  var el = document.getElementById('pixelCanvas');
+  while (el.firstChild) {
+    el.removeChild(el.firstChild);
+  }
 }
 
 /*function colors() {
