@@ -1,9 +1,5 @@
-//Select color input
-var paint = document.getElementById('colorPicker').value;
+//Set Grid Size
 var gridForm = $('#sizePicker');
-
-//paint.addEventListener('switch', colors(), false);
-
 var table = document.getElementById('pixelCanvas');
 var rows;
 var cols;
@@ -44,8 +40,8 @@ function resetTable() {
   }
 }
 
-function colors() {
-  let paintColor = paint.value;
-  gridForm.style.color = paintColor;
-  return paintColor;
-}
+//Set cell color on click
+$('#pixelCanvas').on('click', 'td', function() {
+  var paintColor = document.getElementById('colorPicker').value;
+  $(this).css('background-color', paintColor);
+});
